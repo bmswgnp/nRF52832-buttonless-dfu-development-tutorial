@@ -14,7 +14,7 @@ ECHO "mergehex was not found in PATH, please install using windows installed as 
 goto :end
 )
 
-SET S132=s132_nrf52_6.0.0_softdevice.hex
+SET S132=s132_nrf52_6.1.1_softdevice.hex
 SET BOOTLOADER=bootloader.hex
 
 echo "## Looking to make sure %S132% exists"
