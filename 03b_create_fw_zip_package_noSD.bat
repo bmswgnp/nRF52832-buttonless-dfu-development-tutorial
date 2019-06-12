@@ -19,7 +19,7 @@ goto :end
 echo.
 
 echo "## Creating a FW.zip package that can be used to update the only application FW on the DK"
-nrfutil pkg generate --application app.hex --application-version 1 --application-version-string "1.0.0" --hw-version 52 --sd-req 0xA8 --key-file private.pem FW.zip
+nrfutil pkg generate --application app.hex --application-version 1 --application-version-string "1.0.0" --hw-version 52 --sd-req 0xB7 --key-file private.pem FW.zip
 echo.
 
 :end
