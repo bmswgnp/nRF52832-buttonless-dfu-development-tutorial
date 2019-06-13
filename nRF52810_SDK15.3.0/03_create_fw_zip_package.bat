@@ -9,12 +9,12 @@ ECHO "nrfutil was not found in PATH, please install using pip install"
 goto :end
 )
 
-SET S132=s132_nrf52_6.1.1_softdevice.hex
+SET S112=s112_nrf52_6.1.1_softdevice.hex
 SET APPLICATION_HEX=app.hex
 
-echo "## Looking to make sure %S132% is present in folder"
-if not exist %S132% (
-echo "#### s132 hex file does not exist! Please copy this file into the folder and try again!"
+echo "## Looking to make sure %S112% is present in folder"
+if not exist %S112% (
+echo "#### S112 hex file does not exist! Please copy this file into the folder and try again!"
 goto :end
 )
 echo.
@@ -27,7 +27,7 @@ goto :end
 echo.
 
 echo "## Creating a FW.zip package that can be used to update the FW on the DK"
-nrfutil pkg generate --application app.hex --application-version 1 --application-version-string "1.0.0" --hw-version 52 --sd-req 0xB7 --sd-id 0xB7 --softdevice s132_nrf52_6.1.1_softdevice.hex --key-file private.pem FW.zip
+nrfutil pkg generate --application app.hex --application-version 1 --application-version-string "1.0.0" --hw-version 52 --sd-req 0xB8 --sd-id 0xB8 --softdevice s112_nrf52_6.1.1_softdevice.hex --key-file private.pem FW.zip
 echo.
 
 :end
